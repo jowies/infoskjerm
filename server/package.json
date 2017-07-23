@@ -1,0 +1,36 @@
+{
+  "name": "infoskjerm-server",
+  "version": "1.0.0",
+  "description": "Server for infoskjerm til abakus linjeforening",
+  "main": "server.js",
+  "scripts": {
+    "webserver": "nodemon server.js --exec babel-node --presets es2015,stage-2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "kcors": "^2.2.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.2.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.7.0"
+  }
+}
