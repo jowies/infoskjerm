@@ -20,6 +20,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .slide-enter-active {

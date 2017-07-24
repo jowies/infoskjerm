@@ -26,8 +26,8 @@ export default new Vuex.Store({
       commit('setBus', times);
     },
     async fetchEvents({ commit }) {
-      const events = await Events.getEvents();
-      commit('setEvents', events);
+      const data = await Events.getEvents();
+      commit('setEvents', data.events);
     },
   },
 });

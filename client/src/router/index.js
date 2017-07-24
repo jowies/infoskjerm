@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '../components/Hello';
+import Bedpres from '../components/Bedpres';
 import Bus from '../components/Bus';
 
 Vue.use(Router);
@@ -8,9 +8,9 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Hello',
-      component: Hello,
+      path: '/bedpres',
+      name: 'Bedpres',
+      component: Bedpres,
     },
     {
       path: '/bus',

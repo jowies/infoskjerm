@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     something() {
-      if (this.$store.state.bus) {
+      if (!this.$store.state.bus.error) {
         return this.$store.state.bus.next[0].t;
       }
       return 'Connection error';
@@ -42,10 +42,6 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 
 .card {

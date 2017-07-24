@@ -4,7 +4,7 @@ import store from './store/index';
 let count = 0;
 const routes = [
   '/bus',
-  '/',
+  '/bedpres',
 ];
 
 const updateBus = function update() {
