@@ -11,12 +11,16 @@ const api = new Koa();
 const app = new Koa();
 const router = new Router();
 
-async function getBus() {
+const urlTo = 'https://api.founder.no/atb/stop/16010905';
+const urlFrom = 'https://api.founder.no/atb/stop/16010905';
+
+async function getBus(url) {
   return new Promise((resolve, reject) => {
-    request('https://api.founder.no/atb/stop/16010905', (error, response, body) => {
+    request(url, (error, response, body) => {
       if (!error && response.statusCode === 200) {
         resolve(JSON.parse(body));
       } else {
+        resolve('Internal error');
         reject(error);
       }
     });
@@ -25,9 +29,9 @@ async function getBus() {
 
 
 const bus = async (ctx) => {
-  const info = await getBus();
+  const [infoTo, infoFrom] = await Promise.all([getBus(urlTo), getBus(urlFrom)]);
 
-  ctx.body = info;
+  ctx.body = { to: infoTo, from: infoFrom };
 };
 
 async function getEvents() {
@@ -66,6 +70,7 @@ async function getEvents() {
 
         resolve(send);
       } else {
+        resolve('Internal error');
         reject(error);
       }
     });

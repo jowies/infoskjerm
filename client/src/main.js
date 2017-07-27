@@ -11,7 +11,6 @@ import './assets/main.css';
 Vue.config.productionTip = false;
 
 api.getTimes();
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

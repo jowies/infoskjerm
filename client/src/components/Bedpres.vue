@@ -3,7 +3,7 @@
   <div class="card">
     <img class="abakus" src="../assets/abakus_logo_white-ny.png" />
     <h1>Bedriftspresentasjoner og kurs</h1>
-    <div class="container">
+    <div v-if="!error" class="container">
       <div class="list-left">
         <ul>
           <li v-for="bedrift in bedrifter">
@@ -62,6 +62,9 @@ export default {
       }
       return [];
     },
+    error() {
+      return this.$store.state.events.error;
+    },
   },
 };
 </script>
@@ -72,7 +75,7 @@ h1, h2 {
   font-weight: normal;
   margin-top: 0;
   color: white;
-  font-size: 3vh;
+  font-size: 2.9vh;
 }
 
 ul {
@@ -84,13 +87,14 @@ ul {
 li {
   list-style: none;
   color: white;
-  font-size: 3vh;
+  font-size: 2.9vh;
   padding: 1vh;
 }
 
 img.abakus {
   opacity: 1;
-  width: 60%;
+  height: 7%;
+  margin-top: 2%
 }
 
 img.bekk {

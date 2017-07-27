@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <transition name="slide">
+    <transition v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
         <router-view></router-view>
     </transition>
   </div>
 </template>
 
 <script>
+import { TweenLite } from 'gsap';
+
 export default {
   name: 'app',
+  methods: {
+    enter(el, done) {
+      const width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+      TweenLite.from(el, 2, { x: -width * 2, onComplete: done });
+    },
+    leave(el, done) {
+      const width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+      TweenLite.to(el, 2, { x: width * 2, onComplete: done });
+    },
+  },
 };
 </script>
 
