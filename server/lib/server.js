@@ -51,7 +51,7 @@ async function getEvents() {
             const u = li.get(j);
             const a = $(u).find('a');
             let name = $(a).text().trim();
-            if (name === 'Bli-kjent-grilling i høgskoleparken') {
+            if (name.indexOf('Bli-kjent') !== -1) {
               name = 'Bli-kjent-grilling';
             }
             const p = $(u).find('p');
