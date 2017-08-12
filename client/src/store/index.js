@@ -75,7 +75,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setBus(state, bus) {
-      /* eslint-disable no-param-reassign*/
+      /* eslint-disable no-param-reassign */
       if (bus.to.error) {
         state.bus.to = { error: true, message: 'Det går ingen busser mot midtbyen nå' };
       } else if (bus.to === 'Internal error') {
