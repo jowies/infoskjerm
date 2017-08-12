@@ -18,19 +18,21 @@
     "koa-router": "^7.2.1",
     "koa-spa": "^0.1.3",
     "koa-static": "^3.0.0",
+    "koa-static-cache": "^5.1.1",
     "request": "^2.81.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.3.2",
-    "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-friendly-formatter": "^3.0.0",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-config-airbnb-base": "^11.1.3",
     "nodemon": "^1.11.0",
     "webpack": "^2.7.0"
   }
