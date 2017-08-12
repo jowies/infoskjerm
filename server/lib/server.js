@@ -50,7 +50,10 @@ async function getEvents() {
           for (let j = 0; j < li.length; j += 1) {
             const u = li.get(j);
             const a = $(u).find('a');
-            const name = $(a).text().trim();
+            let name = $(a).text().trim();
+            if (name === 'Bli-kjent-grilling i høgskoleparken') {
+              name = 'Bli-kjent-grilling';
+            }
             const p = $(u).find('p');
             const date = $(p).text();
             if (i === 0) {
