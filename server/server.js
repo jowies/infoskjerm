@@ -30,7 +30,6 @@ async function getBus(url) {
 
 const bus = async (ctx) => {
   const [infoTo, infoFrom] = await Promise.all([getBus(urlTo), getBus(urlFrom)]);
-
   ctx.body = { to: infoTo, from: infoFrom };
 };
 
@@ -79,7 +78,6 @@ async function getEvents() {
 
 const events = async (ctx) => {
   const json = await getEvents();
-
   ctx.body = json;
 };
 
@@ -92,12 +90,10 @@ api.use(cors());
 api.use(router.routes());
 api.use(router.allowedMethods());
 
-
 client.use(serve('../client/dist'));
 
-app.use(mount('/', client));
 app.use(mount('/api', api));
-
+app.use(mount('/', client));
 
 app.listen(3000);
 console.log('Listening on port 3000');

@@ -70,6 +70,8 @@ export default new Vuex.Store({
   state: {
     bus: { from: {}, to: {} },
     events: { error: false },
+    slides: ['bus', 'events', 'fadder1', 'fadder2'],
+    activeSlide: 'bus',
   },
   mutations: {
     setBus(state, bus) {
@@ -99,6 +101,11 @@ export default new Vuex.Store({
         state.events = events;
       }
     },
+    changeSlide(state) {
+      const index = state.slides.indexOf(state.activeSlide);
+      const newIndex = (index + 1) % state.slides.length;
+      state.activeSlide = state.slides[newIndex];
+    },
   },
   actions: {
     async fetchBus({ commit }) {
@@ -108,6 +115,9 @@ export default new Vuex.Store({
     async fetchEvents({ commit }) {
       const events = await Events.getEvents();
       commit('setEvents', events);
+    },
+    changeSlide({ commit }) {
+      commit('changeSlide');
     },
   },
 });

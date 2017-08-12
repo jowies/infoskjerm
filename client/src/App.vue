@@ -1,13 +1,17 @@
 <template>
   <div id="app">
     <transition v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
-        <router-view></router-view>
+        <component v-bind:is="slide"></component>
     </transition>
   </div>
 </template>
 
 <script>
 import { TweenLite } from 'gsap';
+import Bus from './components/Bus';
+import Bedpres from './components/Bedpres';
+import Fadder1 from './components/Fadder1';
+import Fadder2 from './components/Fadder2';
 
 export default {
   name: 'app',
@@ -24,6 +28,17 @@ export default {
         || document.body.clientWidth;
       TweenLite.to(el, 2, { x: width * 2, onComplete: done });
     },
+  },
+  computed: {
+    slide() {
+      return this.$store.state.activeSlide;
+    },
+  },
+  components: {
+    bus: Bus,
+    events: Bedpres,
+    fadder1: Fadder1,
+    fadder2: Fadder2,
   },
 };
 </script>
