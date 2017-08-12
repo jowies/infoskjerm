@@ -53,7 +53,7 @@ export default {
         },
         {
           day: 'Fredag',
-          events: ['Rave på LaBamba', 'Rave på Samfunnet'],
+          events: ['Rave på LaBamba', 'Rave på Samfundet'],
         },
         {
           day: 'Lørdag',

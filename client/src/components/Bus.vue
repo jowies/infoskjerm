@@ -3,6 +3,7 @@
     <div class="card">
       <div class="clock"><h1 class="no-space">{{getHours}}<span class="blink-me">:</span>{{getMinutes}}</h1></div>
       <img src="../assets/atb_logo.png" />
+      <h1>Midlertidig Berg Studentby</h1>
       <h1 v-if="busFromActive" >Mot midtbyen</h1>
       <div v-if="busToActive" class="container">
         <div class="list-left">
@@ -86,14 +87,14 @@ export default {
     },
     getHours() {
       const time = new Date().toLocaleTimeString('nb-NO');
-      const seperate = time.split(':');
+      const seperate = time.split('.');
       /* eslint-disable */
       const newTime = seperate[0];
       return newTime;
     },
     getMinutes() {
       const time = new Date().toLocaleTimeString('nb-NO');
-      const seperate = time.split(':');
+      const seperate = time.split('.');
       /* eslint-disable */
       const newTime = seperate[1];
       return newTime;

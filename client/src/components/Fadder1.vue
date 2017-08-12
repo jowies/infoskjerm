@@ -44,7 +44,7 @@ export default {
         },
         {
           day: 'Onsdag',
-          events: ['Immatrikulering på Gløs', 'Fest på Sammfunnet'],
+          events: ['Immatrikulering på Gløs', 'Fest på Samfundet'],
         },
         {
           day: 'Torsdag',
