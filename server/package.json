@@ -4,7 +4,9 @@
   "description": "Server for infoskjerm til abakus linjeforening",
   "main": "server.js",
   "scripts": {
-    "webserver": "nodemon server.js --exec babel-node --presets es2015,stage-2",
+    "webserver": "nodemon lib/server.js --exec babel-node --presets es2015,stage-2",
+    "build": "babel lib -d dist --presets es2015,stage-2",
+    "serve": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
