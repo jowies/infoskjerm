@@ -11,8 +11,8 @@ const api = new Koa();
 const app = new Koa();
 const router = new Router();
 
-const urlTo = 'https://api.founder.no/atb/stop/16011366';
-const urlFrom = 'https://api.founder.no/atb/stop/16010366';
+const urlTo = 'https://api.founder.no/atb/stop/16011265';
+const urlFrom = 'https://api.founder.no/atb/stop/16010265';
 
 async function getBus(url) {
   return new Promise((resolve, reject) => {

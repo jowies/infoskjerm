@@ -36,7 +36,6 @@
         </ul>
       </div>
     </div>
-    <img class="bekk" src="../assets/bekk_pos_white.png" />
   </div>
   </div>
 </template>
@@ -94,7 +93,7 @@ li {
 img.abakus {
   opacity: 1;
   height: 7%;
-  margin-top: 2%
+  margin-top: 2.5%
 }
 
 img.bekk {
