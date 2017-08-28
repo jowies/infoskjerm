@@ -70,7 +70,7 @@ export default new Vuex.Store({
   state: {
     bus: { from: {}, to: {} },
     events: { error: false },
-    slides: ['bus', 'events', 'fadder1', 'fadder2'],
+    slides: ['bus', 'events'],
     activeSlide: 'bus',
   },
   mutations: {

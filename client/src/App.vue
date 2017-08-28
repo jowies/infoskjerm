@@ -10,8 +10,6 @@
 import { TweenLite } from 'gsap';
 import Bus from './components/Bus';
 import Bedpres from './components/Bedpres';
-import Fadder1 from './components/Fadder1';
-import Fadder2 from './components/Fadder2';
 
 export default {
   name: 'app',
@@ -37,8 +35,6 @@ export default {
   components: {
     bus: Bus,
     events: Bedpres,
-    fadder1: Fadder1,
-    fadder2: Fadder2,
   },
 };
 </script>
