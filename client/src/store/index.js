@@ -27,7 +27,7 @@ const getFormatedTime = (time, realTime) => {
   } else if (difference >= -1 && difference <= 0) {
     formatedTime = realTime ? now : ca + now;
   } else if (difference <= 10) {
-    formatedTime = realTime ? (difference + minutes) : ca + difference + min;
+    formatedTime = realTime ? (difference + minutes) : ca + difference + minutes;
   } else {
     /* eslint-disable prefer-template */
     formatedTime = timePart[0] + ':' + timePart[1];
