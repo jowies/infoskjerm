@@ -71,7 +71,7 @@ export default new Vuex.Store({
     bus: { from: {}, to: {} },
     events: { error: false },
     slides: ['bus', 'events'],
-    activeSlide: 'bus',
+    activeSlide: 'events',
   },
   mutations: {
     setBus(state, bus) {
@@ -104,7 +104,8 @@ export default new Vuex.Store({
     changeSlide(state) {
       const index = state.slides.indexOf(state.activeSlide);
       const newIndex = (index + 1) % state.slides.length;
-      state.activeSlide = state.slides[newIndex];
+      // state.activeSlide = state.slides[newIndex];
+      console.log(newIndex);
     },
   },
   actions: {

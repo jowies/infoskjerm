@@ -7,14 +7,14 @@
       <div class="list-left">
         <ul>
           <li v-for="bedrift in bedrifter">
-            {{ bedrift.name }}
-          </li>
-        </ul>
-      </div>
-      <div class="list-right">
-        <ul>
-          <li class="align-right" v-for="bedrift in bedrifter">
-            {{ bedrift.date }}
+            <div class="con">
+              <div class="align-left">
+                {{ bedrift.name }}
+              </div>
+              <div class="align-right">
+                {{ bedrift.date }}
+             </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -109,8 +109,9 @@ img.bekk {
 
 .list-left {
   height: auto;
-  width: 50%;
+  width: 100%;
   padding-left: 2.5vw;
+  padding-right: 2.5vw;
 }
 .list-right {
   height: auto;
@@ -119,8 +120,16 @@ img.bekk {
   padding-right: 2.5vw;
 }
 
+.align-left {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+
 .align-right {
+  display: inline-block;
   text-align: right;
+  width: 50%;
 }
 
 li+li {
@@ -138,5 +147,10 @@ li+li {
   width: 100%;
   position: absolute;
   padding: 2.5%;
+}
+
+.con {
+  width: 100%;
+  height: 100%;
 }
 </style>
