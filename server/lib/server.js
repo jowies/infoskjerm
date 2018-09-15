@@ -4,7 +4,7 @@ import cors from 'kcors';
 import serve from 'koa-static';
 import mount from 'koa-mount';
 import axios from 'axios';
-import info from './private.json';
+import info from '../private.json';
 
 const client = new Koa();
 const api = new Koa();
